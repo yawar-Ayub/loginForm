@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(185, 224, 211);
+            
+        }
+        .container{
+            
+            
+            max-width: 400px;
+            background-color: rgb(72, 141, 141);
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px gray;
+        }
+        .fields{
+            margin: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            text-align: center !important;
+            background-color: aqua;
+            display: block;
+            padding: 10px 20px;
+            margin: 40px 10px 10px 10px;
+        }
+        .inputfield{
+            width: 100%;
+            height: 2rem;
+            padding: 10px 30px;
+            font-size: 1.5rem;
+            font-family: cursive;
+            border-radius: 10px;
+            border: none;
+
+        }
+        .fields{
+            animation: leftmove 2s ease-out;
+        }
+
+        @keyframes leftmove {
+            0%{
+                opacity: 0;
+                transform: translateX(-200px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes rightmove {
+            0%{
+                opacity: 0;
+                transform: translateX(200px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .second{
+            animation: rightmove 2s ease-out;
+            margin: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <div class="fields">
+                <label>Email</label><br>
+                <input type="text" name="email" class="inputfield">
+            </div>
+            <div class="second">
+                <label>Password</label><br>
+                <input type="password" name="password" class="inputfield">
+            </div>
+            <a href="#">Submit</a>
+        </form>
+    </div>
+</body>
+</html>
